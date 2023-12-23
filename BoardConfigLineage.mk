@@ -18,7 +18,7 @@ DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += vendor/lineage/config/device_frame
 # Partitions
 AB_OTA_PARTITIONS += \
     vendor
-BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
+BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := erofs
 
 # Reserve space for gapps install
 -include vendor/lineage/config/BoardConfigReservedSize.mk
