@@ -25,6 +25,7 @@ else
   TARGET_RECOVERY_UI_MARGIN_HEIGHT := 165
 
   include device/google/coral/BoardConfig-common.mk
+  include device/google/coral/flame/BoardConfigEvolution.mk
 endif
 
 include vendor/google/flame/BoardConfigVendor.mk
