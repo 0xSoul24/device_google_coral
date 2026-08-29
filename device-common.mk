@@ -203,7 +203,8 @@ PRODUCT_ARTIFACT_PATH_REQUIREMENT_ALLOWED_LIST += \
     system/lib/libcodec2_hidl@1.0.so \
     system/lib/libcodec2_hidl_plugin_stub.so \
     system/lib64/libcodec2_hidl@1.0.so \
-    system/lib64/libcodec2_hidl_plugin_stub.so
+    system/lib64/libcodec2_hidl_plugin_stub.so \
+    system/etc/permissions/privapp_allowlist_com.google.android.ext.services.xml
 
 # Elmyra
 PRODUCT_PACKAGES += \
@@ -338,6 +339,7 @@ PRODUCT_COPY_FILES += \
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay-lineage
+DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay-evolution
 
 # Partitions
 PRODUCT_PACKAGES += \
@@ -526,3 +528,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/wifi/wifi_concurrency_cfg.txt:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wifi_concurrency_cfg.txt \
     $(LOCAL_PATH)/configs/wifi/WCNSS_qcom_cfg.ini:$(TARGET_COPY_OUT_VENDOR)/firmware/wlan/qca_cld/WCNSS_qcom_cfg.ini \
     $(LOCAL_PATH)/configs/wifi/wpa_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant_overlay.conf
+
+# Use MINI GApps
+TARGET_USES_MINI_GAPPS := true
